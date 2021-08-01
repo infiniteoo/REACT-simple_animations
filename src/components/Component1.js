@@ -17,6 +17,14 @@ export default function Component1() {
               labore minima corporis a eveniet consequatur itaque ullam
               inventore aut, dolore laudantium error.
             </p>
+
+            <Spring from={{ number: 0 }} to={{ number: 10 }}>
+              {(props) => (
+                <div style={props}>
+                  <h1 style={counter}>{props.number}</h1>
+                </div>
+              )}
+            </Spring>
           </div>
         </div>
       )}
@@ -28,4 +36,12 @@ const c1Style = {
   background: "steelblue",
   color: "white",
   padding: "1.5rem",
+};
+
+const counter = {
+  background: "#333",
+  textAlign: "center",
+  width: "100px",
+  borderRadius: "50%",
+  margin: "1rem auto",
 };
