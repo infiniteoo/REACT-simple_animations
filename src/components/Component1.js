@@ -18,10 +18,14 @@ export default function Component1() {
               inventore aut, dolore laudantium error.
             </p>
 
-            <Spring from={{ number: 0 }} to={{ number: 10 }}>
+            <Spring
+              from={{ number: 0 }}
+              to={{ number: 10 }}
+              config={{ duration: 10000 }}
+            >
               {(props) => (
                 <div style={props}>
-                  <h1 style={counter}>{props.number}</h1>
+                  <h1 style={counter}>{props.number.toFixed()}</h1>
                 </div>
               )}
             </Spring>
